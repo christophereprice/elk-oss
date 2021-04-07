@@ -81,16 +81,6 @@ services:
       - ${PWD}/logstash/pipeline/:/usr/share/logstash/pipeline
     networks:
       - elastic
-  
-  jupyter:
-    image: jupyter/scipy-notebook
-    container_name: jupyter
-    ports:
-      - "8327:8888" 
-    environment:
-      JUPYTER_TOKEN: changeme
-    networks:
-      - elastic
 
 volumes:
   data01:
