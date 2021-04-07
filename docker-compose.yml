@@ -77,8 +77,7 @@ services:
       - 5044:5044
       - 5586:5586      
     volumes:
-      #- ${PWD}/logstash/config/:/usr/share/logstash/config
-      - ${PWD}/logstash/pipeline/:/usr/share/logstash/pipeline
+      - ${PWD}/logstash-conf/:/usr/share/logstash/pipeline
     networks:
       - elastic
 
